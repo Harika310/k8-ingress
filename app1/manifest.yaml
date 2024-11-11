@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: app1
-        image: harika402/app-1:v1
+        image: harika402/app1:v1
 ---
 kind: Service
 apiVersion: v1
@@ -47,13 +47,13 @@ metadata:
       kubernetes.io/ingress.class: alb
       alb.ingress.kubernetes.io/scheme: internet-facing
       alb.ingress.kubernetes.io/target-type: ip
-      alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:315069654700:certificate/eefec79d-8012-4e7e-a530-baf154b833f2
+      alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:905418172435:certificate/717b6de3-c0da-445f-84b7-e14aa75a201f
       alb.ingress.kubernetes.io/listen-ports: '[ {"HTTPS": 443} ]'
       alb.ingress.kubernetes.io/tags: Environment=dev,Team=test
       alb.ingress.kubernetes.io/group.name: expense
 spec:
     rules:
-    - host: "app1.daws81s.online"
+    - host: "app1.daws-81s.online"
       http:
         paths:
         - pathType: Prefix
