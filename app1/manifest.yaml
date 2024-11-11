@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: app1
-        image: harika402/app1:v1
+        image: harika402/app-1:v1
 ---
 kind: Service
 apiVersion: v1
