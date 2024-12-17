@@ -51,7 +51,7 @@ metadata:
       alb.ingress.kubernetes.io/tags: Environment=dev,Team=test
       alb.ingress.kubernetes.io/group.name: expense
 spec:
-    ingressClassName: alb
+    # ingressClassName: alb
     rules:
     - host: "app1.daws-81s.online"
       http:
