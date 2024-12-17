@@ -44,7 +44,7 @@ kind: Ingress
 metadata:
     name: app1
     annotations:
-      kubernetes.io/ingress.class: alb
+      #kubernetes.io/ingress.class: alb
       alb.ingress.kubernetes.io/scheme: internet-facing
       alb.ingress.kubernetes.io/target-type: ip
       alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:905418172435:certificate/06fb599b-37a7-4c1d-901e-2fcd0cf7cef6
@@ -52,9 +52,9 @@ metadata:
       alb.ingress.kubernetes.io/tags: Environment=dev,Team=test
       alb.ingress.kubernetes.io/group.name: expense
 spec:
-    # ingressClassName: alb
+    ingressClassName: alb
     rules:
-    - host: "app1.daws-81s.online"
+    - host: "app1.daws81s.online"
       http:
         paths:
         - pathType: Prefix
